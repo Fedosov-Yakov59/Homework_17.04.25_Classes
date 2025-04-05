@@ -1,0 +1,20 @@
+import math
+
+class VolumeCalculator:
+    def cube(self, side_length):
+        """Вычисляет объем куба."""
+        if side_length <= 0:
+            raise ValueError("Длина стороны должна быть положительным числом.")
+        return side_length ** 3
+
+    def sphere(self, radius):
+        """Вычисляет объем сферы."""
+        if radius <= 0:
+            raise ValueError("Радиус должен быть положительным числом.")
+        return (4/3) * math.pi * (radius ** 3)
+
+    def cylinder(self, radius, height):
+        """Вычисляет объем цилиндра."""
+        if radius <= 0 or height <= 0:
+            raise ValueError("Радиус и высота должны быть положительными числами.")
+        return math.pi * (radius ** 2) * height
